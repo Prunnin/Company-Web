@@ -3619,3 +3619,9 @@ p.form-message.error{
     margin-top: 6px;
     margin-left: 0px;
 }
+
+#user-info,
+#logout {
+  display: none;
+}
+

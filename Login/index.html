@@ -59,7 +59,7 @@
         <!--start header section-->
         <header class="header">
             <!--start navbar-->
-            <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar navbar-default navbar-fixed-top" style="z-index: 100;">
                 <div class="container">
                     <div class="row">
                         <div class="navbar-header page-scroll">
@@ -84,6 +84,8 @@
                                 <li><a class="page-scroll" href="#faqs">Faq</a></li>
                                 <li><a class="page-scroll" href="#news">News</a></li>
                                 <li><a class="page-scroll" href="#contact">Contact</a></li>
+                                <li id="user-info" style="display: none;"></li>
+                                <li id="logout" style="display: none;"><a class="page-scroll" href="#">Logout</a></li>
                                 <button class="button" id="form-open">Login</button>
                             </ul>
                         </div>
@@ -146,7 +148,14 @@
                     <i class="uil uil-lock password"></i>
                     <i class="uil uil-eye-slash pw_hide"></i>
                 </div>
-    
+                <div class="input_box">
+                    <input type="tel" placeholder="Enter your phone number" pattern="[0-9]+" required />
+                    <i class="uil uil-phone-alt phone"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Enter your address" required />
+                    <i class="uil uil-location-pin-alt address"></i>
+                </div>
                 <button class="button">Signup Now</button>
     
                 <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
