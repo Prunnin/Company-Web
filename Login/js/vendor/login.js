@@ -115,6 +115,17 @@ function updateUIAfterLogin(user) {
   home.classList.remove("show");
   formOpenBtn.style.display = "none";
 }
+// Function to update UI after successful signup
+function updateUIAfterSignup() {
+  alert("Sign up success");
+}
+
+signupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // Here you would perform the necessary validation and backend processing
+  // In this example, we simply call the updateUIAfterSignup function
+  updateUIAfterSignup();
+});
 
 logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
