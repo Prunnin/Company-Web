@@ -9,7 +9,7 @@ const formOpenBtn = document.querySelector("#form-open"),
   signupForm = document.querySelector(".signup_form"),
   logoutBtn = document.querySelector("#logout"),
   userInfo = document.querySelector("#user-info");
-
+  
 // Simulated login functionality (replace with your actual authentication logic)
 function login(email, password) {
   // Simulating successful login
@@ -102,6 +102,16 @@ function resetUIState() {
   });
 }
 
+// Function to show the contact page after successful login
+function showContactPage() {
+  home.classList.add("show");
+} 
+
+// Function to show the contact page after successful login
+function showContactPage() {
+  const contactPage = document.querySelector(".contact-page");
+  contactPage.style.display = "block";
+}
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
   userInfo.textContent = user.name;
@@ -114,7 +124,10 @@ function updateUIAfterLogin(user) {
   signupForm.style.display = "none";
   home.classList.remove("show");
   formOpenBtn.style.display = "none";
+
+  showContactPage();
 }
+
 // Function to update UI after successful signup
 function updateUIAfterSignup() {
   alert("Sign up success");
@@ -131,7 +144,17 @@ logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   resetUIState();
 });
+// Show the success contact
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the button element by its ID
+  const btnContactUs = document.getElementById("btnContactUs");
 
+  // Add a click event listener to the button
+  btnContactUs.addEventListener("click", function() {
+    // Show the alert when the button is clicked
+    alert("Send message successful");
+  });
+});
 
 
 

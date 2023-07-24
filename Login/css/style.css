@@ -3625,3 +3625,6 @@ p.form-message.error{
   display: none;
 }
 
+.contact-page{
+    display: none;
+}
