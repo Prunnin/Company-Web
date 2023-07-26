@@ -185,7 +185,7 @@ b, strong {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
 }
-
+/* fix code  */
 .softo-solid-btn {
     padding: 5px 30px;
     border: 2px solid #281483;
@@ -195,6 +195,7 @@ b, strong {
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     letter-spacing: 0.5px;
+    margin-top: 12px;
 }
 
 .softo-solid-btn:hover {
@@ -3627,4 +3628,9 @@ p.form-message.error{
 
 .contact-page{
     display: none;
+}
+
+.create-post {
+    display: none ; 
+    justify-content: center;
 }

@@ -102,17 +102,11 @@ function resetUIState() {
   });
 }
 
-// Function to show the contact page after successful login
-function showContactPage() {
-  home.classList.add("show");
-} 
 
-// Function to show the contact page after successful login
-function showContactPage() {
-  const contactPage = document.querySelector(".contact-page");
-  contactPage.style.display = "block";
+function showCreatePost() {
+  const newPost = document.querySelector(".create-post");
+  newPost.style.display = "flex";
 }
-
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
   userInfo.textContent = user.name;
@@ -126,8 +120,7 @@ function updateUIAfterLogin(user) {
   home.classList.remove("show");
   formOpenBtn.style.display = "none";
 
-  showContactPage();
-  
+  showCreatePost();
 }
 
 // Function to update UI after successful signup

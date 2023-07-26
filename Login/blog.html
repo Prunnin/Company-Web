@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--title-->
+    <title>ApeTech - App Landing Page Template</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--themify icon-->
+    <link rel="stylesheet" href="css/themify-icons.css">
+
+    <!-- magnific popup css-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!--owl carousel -->
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- bootstrap core css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- responsive css -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.1.min.js"></script>
+    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shim.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+<!--end preloader-->
+
+<div id="main" class="main-content-wraper">
+    <div class="main-content-inner">
+
+        <!--start header section-->
+        <header class="header">
+            <!--start navbar-->
+            <div class="navbar navbar-default navbar-fixed-top" style="z-index: 100;">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header page-scroll">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#myNavbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand page-scroll" href="index.html">
+                                <img src="img/logo.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="navbar-collapse collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a class="page-scroll" href="#features">Features</a></li>
+                                <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+                                <li><a class="page-scroll" href="#faqs">Faq</a></li>
+                                <li><a class="page-scroll" href="#news">News</a></li>
+                                <li><a class="page-scroll" href="#contact">Contact</a></li>
+                                <li id="user-info" style="display: none;"></li>
+                                <li id="logout" style="display: none;"><a class="page-scroll" href="#">Logout</a></li>
+                                <button class="button" id="form-open">Login</button>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--end navbar-->
+        </header>
+        <!--end header section-->
+        <!-- Home -->
+        <section class="home">
+            <div class="form_container">
+            <i class="fa fa-window-close form_close"></i>
+            <!-- Login From -->
+            <div class="form login_form">
+                <form action="#">
+                <h2>Login</h2>
+    
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Enter your password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+    
+                <div class="option_field">
+                    <span class="checkbox">
+                    <input type="checkbox" id="check" />
+                    <label for="check">Remember me</label>
+                    </span>
+                    <a href="#" class="forgot_pw">Forgot password?</a>
+                </div>
+    
+                <button class="button">Login Now</button>
+    
+                <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                </form>
+            </div>
+    
+            <!-- Signup From -->
+            <div class="form signup_form">
+                <form action="#">
+                <h2>Signup</h2>
+    
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Create password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Confirm password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+                <div class="input_box">
+                    <input type="tel" placeholder="Enter your phone number" pattern="[0-9]+" required />
+                    <i class="uil uil-phone-alt phone"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Enter your address" required />
+                    <i class="uil uil-location-pin-alt address"></i>
+                </div>
+                <button class="button">Signup Now</button>
+    
+                <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                </form>
+            </div>
+            </div>
+        </section>
+        <!--start breadcrumb section-->
+        <section class="breadcrumb-section" style="background: url('img/video-play.jpg')no-repeat center center fixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center breadcrumb-content">
+                            <h2>Our Blog</h2>
+                            <p>Intrinsicly brand market-driven supply chains before tactical intellectual capital. Collaboratively mesh effective relationships before granular products. Holisticly.</p>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end breadcrumb section-->
+
+       <!--start blog articale section-->
+        <section class="blog-article-section bg-secondary pt-60 pb-30">
+            <div class="blog-article-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Continually reinvent
+                                        competitive</a></h3>
+                                    <p>Rapidiously aggregate client-focused strategic theme areas after
+                                        high-quality data. Continually aggregate diverse ideas. </p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Competently impact
+                                        strategic</a></h3>
+                                    <p>Professionally grow technically sound technologies with fully researched
+                                        metrics. Assertively embrace empowered.</p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Continually reinvent
+                                        competitive</a></h3>
+                                    <p>Rapidiously aggregate client-focused strategic theme areas after
+                                        high-quality data. Continually aggregate diverse ideas. </p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Rapidiously predominate
+                                        just</a></h3>
+                                    <p>Continually fabricate magnetic interfaces through inexpensive solutions.
+                                        Continually iterate distributed infomediaries. </p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Interactively productize
+                                        low-risk</a></h3>
+                                    <p>Appropriately develop high-payoff catalysts for change after premier
+                                        e-markets. This is interactively maximize.</p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Competently impact
+                                        strategic</a></h3>
+                                    <p>Professionally grow technically sound technologies with fully researched
+                                        metrics. Assertively embrace empowered.</p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Continually reinvent
+                                        competitive</a></h3>
+                                    <p>Rapidiously aggregate client-focused strategic theme areas after
+                                        high-quality data. Continually aggregate diverse ideas. </p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Competently impact
+                                        strategic</a></h3>
+                                    <p>Professionally grow technically sound technologies with fully researched
+                                        metrics. Assertively embrace empowered.</p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Continually reinvent
+                                        competitive</a></h3>
+                                    <p>Rapidiously aggregate client-focused strategic theme areas after
+                                        high-quality data. Continually aggregate diverse ideas. </p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Rapidiously predominate
+                                        just</a></h3>
+                                    <p>Continually fabricate magnetic interfaces through inexpensive solutions.
+                                        Continually iterate distributed infomediaries. </p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Interactively productize
+                                        low-risk</a></h3>
+                                    <p>Appropriately develop high-payoff catalysts for change after premier
+                                        e-markets. This is interactively maximize.</p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-blog-article mb-30">
+                                <div class="blog-post-img-thumb">
+                                    <a href="blog-details.html" target="_blank">
+                                        <img src="img/blog-img2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-post-content-area">
+                                    <h3><a href="blog-details.html" target="_blank">Competently impact
+                                        strategic</a></h3>
+                                    <p>Professionally grow technically sound technologies with fully researched
+                                        metrics. Assertively embrace empowered.</p>
+                                    <div class="blog-footer-area">
+                                        <a class="readmore-btn" href="blog-details.html" target="_blank">Read
+                                            More <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-post">
+                <a href="post.html" class="btn softo-solid-btn center-btn">Create New Post</a>
+            </div>
+        </section>
+       <!--start blog articale section-->
+
+        <!--start footer section-->
+        <footer class="footer-section ptb-60">
+            <div class="footer-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="footer-single-col text-center">
+                                <img src="img/logo-color.png" alt="footer logo">
+                                <div class="footer-social-list">
+                                    <ul class="list-inline">
+                                        <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="copyright-text">
+                                    <p>&copy; copyright <a href="#">ApeTech</a> Software Template By <a
+                                            href="https://themeforest.net/user/htmllover/portfolio" target="_blank">HtmlLover</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--end footer section-->
+
+    </div><!--end main content inner-->
+</div>
+<!--end main container -->
+
+
+<!--=========== all js file link ==============-->
+
+<!-- main jQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<!-- bootstrap core js -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- smothscroll -->
+<script src="js/jquery.easeScroll.min.js"></script>
+
+<!--owl carousel-->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- scrolling nav -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!--fullscreen background video js-->
+<script src="js/jquery.mb.ytplayer.min.js"></script>
+
+<!--typed js -->
+<script src="js/typed.min.js"></script>
+
+<!--magnific popup js-->
+<script src="js/magnific-popup.min.js"></script>
+
+<!-- custom script -->
+<script src="js/scripts.js"></script>
+<script src="js/vendor/createpost.js"></script>
+</body>
+</html>
