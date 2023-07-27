@@ -3631,6 +3631,10 @@ p.form-message.error{
 }
 
 .create-post {
-    display: none ; 
+    display: flex ; 
     justify-content: center;
+}
+
+.form-close{
+    color: whitesmoke;
 }

@@ -9,7 +9,7 @@ const formOpenBtn = document.querySelector("#form-open"),
   signupForm = document.querySelector(".signup_form"),
   logoutBtn = document.querySelector("#logout"),
   userInfo = document.querySelector("#user-info");
-  
+
 // Simulated login functionality (replace with your actual authentication logic)
 function login(email, password) {
   // Simulating successful login
@@ -24,6 +24,7 @@ function login(email, password) {
 
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
+  debugger;
   userInfo.textContent = user.name;
   userInfo.style.display = "inline-block";
   logoutBtn.style.display = "inline-block";
@@ -100,13 +101,15 @@ function resetUIState() {
     e.preventDefault();
     toggleFormDisplay(loginForm, signupForm);
   });
+
+  showCreatePost(false);
 }
 
-
-function showCreatePost() {
+function showCreatePost(isLoggedIn) {
   const newPost = document.querySelector(".create-post");
-  newPost.style.display = "flex";
+  newPost.style.display = isLoggedIn ? "flex" : "none";
 }
+
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
   userInfo.textContent = user.name;
@@ -120,7 +123,10 @@ function updateUIAfterLogin(user) {
   home.classList.remove("show");
   formOpenBtn.style.display = "none";
 
-  showCreatePost();
+  // Redirect to blog-login.html after successful login
+  window.location.href = "blog-login.html";
+
+  showCreatePost(true);
 }
 
 // Function to update UI after successful signup
@@ -139,17 +145,15 @@ logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   resetUIState();
 });
+showCreatePost(false);
 // Show the success contact
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Get the button element by its ID
   const btnContactUs = document.getElementById("btnContactUs");
 
   // Add a click event listener to the button
-  btnContactUs.addEventListener("click", function() {
+  btnContactUs.addEventListener("click", function () {
     // Show the alert when the button is clicked
     alert("Send message successful");
   });
 });
-
-
-
