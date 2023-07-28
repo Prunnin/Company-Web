@@ -86,6 +86,8 @@ function resetUIState() {
   signupForm.style.display = "none";
   formOpenBtn.style.display = "inline-block";
 
+  updateButtonLinks(false);
+
   const toggleFormDisplay = (formToShow, formToHide) => {
     formContainer.classList.add("active");
     formToShow.style.display = "block";
@@ -114,6 +116,18 @@ function showContactPage() {
   contactPage.style.display = "block";
 }
 
+function updateButtonLinks(loggedIn) {
+  const blogsLink = document.getElementById("blogsLink");
+  const noblogsLink = document.getElementById("noblogsLink");
+
+  if (loggedIn) {
+    blogsLink.style.display = "inline-block";
+    noblogsLink.style.display = "none";
+  } else {
+    blogsLink.style.display = "none";
+    noblogsLink.style.display = "inline-block";
+  }
+}
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
   userInfo.textContent = user.name;
@@ -126,8 +140,8 @@ function updateUIAfterLogin(user) {
   signupForm.style.display = "none";
   home.classList.remove("show");
   formOpenBtn.style.display = "none";
-  const blogsLink = document.getElementById("blogsLink");
-  blogsLink.href = "blog-login.html";
+  updateButtonLinks(true);
+
   showContactPage();
 
   // Store the login state in Local Storage
@@ -139,6 +153,8 @@ function checkLoggedInUser() {
   if (storedUser) {
     const user = JSON.parse(storedUser);
     updateUIAfterLogin(user);
+  } else {
+    resetUIState(); // Ensure buttons are set correctly when user is not logged in
   }
 }
 
