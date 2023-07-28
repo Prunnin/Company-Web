@@ -129,7 +129,19 @@ function updateUIAfterLogin(user) {
   const blogsLink = document.getElementById("blogsLink");
   blogsLink.href = "blog-login.html";
   showContactPage();
+
+  // Store the login state in Local Storage
+  localStorage.setItem("loggedInUser", JSON.stringify(user));
 }
+
+function checkLoggedInUser() {
+  const storedUser = localStorage.getItem("loggedInUser");
+  if (storedUser) {
+    const user = JSON.parse(storedUser);
+    updateUIAfterLogin(user);
+  }
+}
+
 
 // Function to update UI after successful signup
 function updateUIAfterSignup() {
@@ -149,6 +161,8 @@ logoutBtn.addEventListener("click", (e) => {
 });
 // Show the success contact
 document.addEventListener("DOMContentLoaded", function () {
+  checkLoggedInUser();
+
   // Get the button element by its ID
   const btnContactUs = document.getElementById("btnContactUs");
 
