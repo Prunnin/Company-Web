@@ -165,26 +165,46 @@
                                     <!--end comments section-->
 
                                     <!--start comment form-->
-                                    <form class="col-sm-12 comment-form send-message">
-                                        <h3 class="blog-details-subtitle">Leave a Reply</h3>
-                                        <div class="row">
-                                            <!--Name-->
-                                            <div class="col-md-6">
-                                                <input class="comment-input-field" type="text" placeholder="Name">
-                                            </div>
-                                            <!--Email-->
-                                            <div class="col-md-6">
-                                                <input class="comment-input-field" type="text" placeholder="Email">
-                                            </div>
-                                            <!--Message-->
-                                            <div class="col-md-12">
-                                                <textarea name="comment-message" placeholder="Message" rows="5"></textarea>
-                                            </div>
-                                        </div>
-                                        <input class="btn softo-solid-btn" type="submit" value="Send">
+<form id="commentForm" class="col-sm-12 comment-form send-message">
+    <h3 class="blog-details-subtitle">Leave a Reply</h3>
+    <div class="row">
+        <!--Name-->
+        <div class="col-md-6">
+            <input class="comment-input-field" type="text" placeholder="Name">
+        </div>
+        <!--Email-->
+        <div class="col-md-6">
+            <input class="comment-input-field" type="text" placeholder="Email">
+        </div>
+        <!--Message-->
+        <div class="col-md-12">
+            <textarea name="comment-message" placeholder="Message" rows="5"></textarea>
+        </div>
+    </div>
+    <input class="btn softo-solid-btn" type="submit" value="Send" onclick="submitForm(event)">
+</form>
+<!--end comment form-->
 
-                                    </form>
-                                    <!--end comment form-->
+<script>
+    function submitForm(event) {
+        // Get the form elements
+        var nameInput = document.querySelector('#commentForm input[placeholder="Name"]');
+        var emailInput = document.querySelector('#commentForm input[placeholder="Email"]');
+        var messageInput = document.querySelector('#commentForm textarea[name="comment-message"]');
+
+        // Check if all fields are filled
+        if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '') {
+            // Show the "Comment successful" alert
+            alert("Comment successful");
+        } else {
+            // Show an alert asking the user to fill in all the fields
+            alert("Please fill in all the fields.");
+            // Prevent the form submission
+            event.preventDefault();
+        }
+    }
+</script>
+
                                 </div>
                             </div>
                         </div>
