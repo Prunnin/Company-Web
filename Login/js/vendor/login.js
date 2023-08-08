@@ -156,6 +156,7 @@ function checkLoggedInUser() {
   } else {
     resetUIState(); // Ensure buttons are set correctly when user is not logged in
   }
+
 }
 
 
@@ -173,6 +174,7 @@ signupForm.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  localStorage.removeItem("loggedInUser"); // Clear user's login state
   resetUIState();
 });
 // Show the success contact
