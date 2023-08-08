@@ -85,7 +85,8 @@ function resetUIState() {
   loginForm.style.display = "block";
   signupForm.style.display = "none";
   formOpenBtn.style.display = "inline-block";
-
+  const contactPage = document.querySelector(".contact-page");
+  contactPage.style.display = "none";
   updateButtonLinks(false);
 
   const toggleFormDisplay = (formToShow, formToHide) => {
