@@ -991,6 +991,7 @@ SECTION MARGIN
     margin-top: 16px;
     border: 1px solid #fff;
     background-color: #fff;
+
 }
 
 .navbar .navbar-toggle .icon-bar,
@@ -2813,6 +2814,7 @@ SECTION MARGIN
 .faq-img {
     text-align: center;
     margin: 0 auto;
+    margin-top: 90px;
 }
 
 #accordion .panel {
@@ -3637,4 +3639,7 @@ p.form-message.error{
 
 .form-close{
     color: whitesmoke;
+}
+.logo{
+    margin-top: -14px;
 }

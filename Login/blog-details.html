@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--title-->
-    <title>ApeTech - App Landing Page Template</title>
+    <title>intX, jsc#blog-detail</title>
 
     <!--favicon icon-->
-    <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="img/logo-mau-tim-than.png" type="image/png" sizes="16x16" />
 
     <!-- font-awesome css -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -70,19 +70,21 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand page-scroll" href="index.html">
-                                <img src="img/logo.png" alt="logo">
+                                <div class = "logo"> 
+                                    <img src="img/logo-mau-trang.png" alt="logo"  height= 50/>
+                                </div>
                             </a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="navbar-collapse collapse" id="myNavbar">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a class="page-scroll" href="#hero">Home</a></li>
-                                <li><a class="page-scroll" href="#features">Features</a></li>
-                                <li><a class="page-scroll" href="#pricing">Pricing</a></li>
-                                <li><a class="page-scroll" href="#faqs">Faq</a></li>
-                                <li><a class="page-scroll" href="#news">News</a></li>
-                                <li><a class="page-scroll" href="#contact">Contact</a></li>
+                                <li class="active"><a class="page-scroll" href="index.html#hero">Home</a></li>
+                                <li><a class="page-scroll" href="index.html#features">Features</a></li>
+                                <li><a class="page-scroll" href="index.html#pricing">Pricing</a></li>
+                                <li><a class="page-scroll" href="index.html#faqs">Faq</a></li>
+                                <li><a class="page-scroll" href="index.html#news">News</a></li>
+                                <li><a class="page-scroll" href="index.html#contact">Contact</a></li>
                             </ul>
                         </div>
 
@@ -94,13 +96,13 @@
         <!--end header section-->
 
         <!--start breadcrumb section-->
-        <section class="breadcrumb-section" style="background: url('img/download-bg.jpg')no-repeat center center fixed">
+        <section class="breadcrumb-section" style="background: url('img/vieo-play\(1\).png')no-repeat center center fixed">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-center breadcrumb-content">
                             <h2>Blog Details</h2>
-                            <p>Intrinsicly brand market-driven supply chains before tactical intellectual capital. Collaboratively mesh effective relationships before granular products. Holisticly.</p>
+                            <p>Unveiling Tomorrow's Innovation Today.</p>
                             <ul class="breadcrumb">
                                 <li><a href="index.html">Home</a></li>
                                 <li>Blog Details</li>
@@ -120,7 +122,7 @@
                         <div class="col-md-8 col-md-offset-2">
                             <div class="blog-single-content-wrap">
                                 <div class="blog-single-img">
-                                    <img src="img/captreo.jpg" alt="Blog single image" class="img-responsive">
+                                    <img src="img/IT.jpg" alt="Blog single image" class="img-responsive">
                                 </div>
                                 <h1>Continually aggregate interdependent infrastructures with progressive.</h1>
                                 <div class="blog-details-post-meta">Posted <span>1 january 2018</span> by Mr. Joy</div>
@@ -165,45 +167,45 @@
                                     <!--end comments section-->
 
                                     <!--start comment form-->
-<form id="commentForm" class="col-sm-12 comment-form send-message">
-    <h3 class="blog-details-subtitle">Leave a Reply</h3>
-    <div class="row">
-        <!--Name-->
-        <div class="col-md-6">
-            <input class="comment-input-field" type="text" placeholder="Name">
-        </div>
-        <!--Email-->
-        <div class="col-md-6">
-            <input class="comment-input-field" type="text" placeholder="Email">
-        </div>
-        <!--Message-->
-        <div class="col-md-12">
-            <textarea name="comment-message" placeholder="Message" rows="5"></textarea>
-        </div>
-    </div>
-    <input class="btn softo-solid-btn" type="submit" value="Send" onclick="submitForm(event)">
-</form>
-<!--end comment form-->
+                                        <form id="commentForm" class="col-sm-12 comment-form send-message">
+                                            <h3 class="blog-details-subtitle">Leave a Reply</h3>
+                                            <div class="row">
+                                                <!--Name-->
+                                                <div class="col-md-6">
+                                                    <input class="comment-input-field" type="text" placeholder="Name">
+                                                </div>
+                                                <!--Email-->
+                                                <div class="col-md-6">
+                                                    <input class="comment-input-field" type="text" placeholder="Email">
+                                                </div>
+                                                <!--Message-->
+                                                <div class="col-md-12">
+                                                    <textarea name="comment-message" placeholder="Message" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                            <input class="btn softo-solid-btn" type="submit" value="Send" onclick="submitForm(event)">
+                                        </form>
+                                    <!--end comment form-->
 
-<script>
-    function submitForm(event) {
-        // Get the form elements
-        var nameInput = document.querySelector('#commentForm input[placeholder="Name"]');
-        var emailInput = document.querySelector('#commentForm input[placeholder="Email"]');
-        var messageInput = document.querySelector('#commentForm textarea[name="comment-message"]');
+                                <script>
+                                    function submitForm(event) {
+                                        // Get the form elements
+                                        var nameInput = document.querySelector('#commentForm input[placeholder="Name"]');
+                                        var emailInput = document.querySelector('#commentForm input[placeholder="Email"]');
+                                        var messageInput = document.querySelector('#commentForm textarea[name="comment-message"]');
 
-        // Check if all fields are filled
-        if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '') {
-            // Show the "Comment successful" alert
-            alert("Comment successful");
-        } else {
-            // Show an alert asking the user to fill in all the fields
-            alert("Please fill in all the fields.");
-            // Prevent the form submission
-            event.preventDefault();
-        }
-    }
-</script>
+                                        // Check if all fields are filled
+                                        if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '') {
+                                            // Show the "Comment successful" alert
+                                            alert("Comment successful");
+                                        } else {
+                                            // Show an alert asking the user to fill in all the fields
+                                            alert("Please fill in all the fields.");
+                                            // Prevent the form submission
+                                            event.preventDefault();
+                                        }
+                                    }
+                                </script>
 
                                 </div>
                             </div>
@@ -221,7 +223,8 @@
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <div class="footer-single-col text-center">
-                                <img src="img/logo-color.png" alt="footer logo">
+                                <!-- logo cuoi trang  -->
+                                <img src="img/logo-mau-tim-than.png" alt="footer logo">
                                 <div class="footer-social-list">
                                     <ul class="list-inline">
                                         <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
