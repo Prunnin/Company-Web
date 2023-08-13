@@ -90,9 +90,8 @@
                     <li><a class="page-scroll" href="index.html#news">News</a></li>
                     <li><a class="page-scroll" href="index.html#contact">Contact</a></li>
                     <li id="logout" style="display: inline-block">
-                      <a class="page-scroll" href="blog-no-login.html"
-                        >Logout</a
-                      >
+                      <a class="page-scroll" href="blog-no-login.html" onclick="logout()"
+                        >Logout</a>
                     </li>
                   </ul>
                 </div>
@@ -145,7 +144,7 @@
                                 <h3><a href="blog-details.html" target="_blank">Continually reinvent
                                     competitive</a></h3>
                                 <p>Rapidiously aggregate client-focused strategic theme areas after
-                                    high-quality data. Continually aggregate diverse ideas. </p>
+                                    high-quality data. Continually aggregate diverse ideashello everyone my name is lakjsdlkasjdlkasjd and Im here to ajksdnkasnd</p>
                                 <div class="blog-footer-area">
                                     <a class="readmore-btn" href="blog-details.html" target="_blank">Read
                                         More <i class="fa fa-angle-right"></i></a>
@@ -153,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <!-- <div class="col-md-4 col-sm-6">
                         <div class="single-blog-article mb-30">
                             <div class="blog-post-img-thumb">
                                 <a href="blog-details.html" target="_blank">
@@ -171,7 +170,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-md-4 col-sm-6">
                         <div class="single-blog-article mb-30">
                             <div class="blog-post-img-thumb">
@@ -439,6 +438,13 @@
 
     <!-- custom script -->
     <script src="js/scripts.js"></script>
-    <!-- <script src="js/vendor/createpost.js"></script> -->
+    <script src="js/vendor/createpost.js"></script>
+    <script>
+        // Clear local storage when the page loads
+        function logout() {
+            // Clear local storage when the "Logout" link is clicked
+            localStorage.clear();
+        }
+    </script>
   </body>
 </html>
