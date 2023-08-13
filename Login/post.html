@@ -74,7 +74,24 @@
     </div>
   </div>
   <script>
-    // JavaScript function to add posts remains the same as before
+    function addPost() {
+      // Get the input values
+      var titleInput = document.getElementById("title");
+      var statusInput = document.getElementById("status");
+  
+      // Check if both title and status are filled
+      if (titleInput.value.trim() === "" || statusInput.value.trim() === "") {
+        alert("Please enter both a title and a status before posting.");
+        return; // Do not proceed if inputs are not filled
+      }
+  
+      // Your existing logic to add posts
+  
+      // If inputs are filled, show the success alert
+      alert("Your status has been posted");
+    }
   </script>
+  
+  
 </body>
 </html>

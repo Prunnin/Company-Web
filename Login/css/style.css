@@ -3030,13 +3030,15 @@ SECTION MARGIN
 }
 
 
-.single-blog-article{
-    background: #fff;
-    border-radius: 4px;
-    display: block;
+.single-blog-article p {
+    max-height: 4em; /* Adjust the maximum height as needed */
     overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show before truncating */
+    -webkit-box-orient: vertical;
 }
+
 
 .blog-post-img-thumb{
     display: block;
@@ -3056,6 +3058,7 @@ SECTION MARGIN
 }
 .blog-post-content-area{
     padding: 20px;
+    
 }
 
 .blog-post-content-area h3{
@@ -3643,3 +3646,4 @@ p.form-message.error{
 .logo{
     margin-top: -14px;
 }
+
