@@ -25,6 +25,7 @@ function login(email, password) {
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
   debugger;
+  
   userInfo.textContent = user.name;
   userInfo.style.display = "inline-block";
   logoutBtn.style.display = "inline-block";
@@ -131,22 +132,27 @@ function updateButtonLinks(loggedIn) {
 }
 // Function to update UI after successful login
 function updateUIAfterLogin(user) {
-  userInfo.textContent = user.name;
-  userInfo.style.display = "inline-block";
-  userInfo.style.color = "ghostwhite";
-  userInfo.style.margin = "16px";
-  logoutBtn.style.display = "inline-block";
-  loginBtn.style.display = "none";
-  loginForm.style.display = "none";
-  signupForm.style.display = "none";
-  home.classList.remove("show");
-  formOpenBtn.style.display = "none";
-  updateButtonLinks(true);
+  if (user.name === "Admin") {
+    document.getElementById("admin-content").style.display = "block"; // Show admin content
+    userInfo.textContent = user.name;
+    userInfo.style.display = "inline-block";
+    userInfo.style.color = "ghostwhite";
+    userInfo.style.margin = "16px";
+    logoutBtn.style.display = "inline-block";
+    loginBtn.style.display = "none";
+    loginForm.style.display = "none";
+    signupForm.style.display = "none";
+    home.classList.remove("show");
+    formOpenBtn.style.display = "none";
+    updateButtonLinks(true);
 
-  showContactPage();
+    showContactPage();
 
-  // Store the login state in Local Storage
-  localStorage.setItem("loggedInUser", JSON.stringify(user));
+    // Store the login state in Local Storage
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+  } else {
+    alert("Invalid credentials or not an admin user.");
+  }
 }
 
 function checkLoggedInUser() {
@@ -176,6 +182,7 @@ signupForm.addEventListener("submit", (e) => {
 logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   localStorage.removeItem("loggedInUser"); // Clear user's login state
+  document.getElementById("admin-content").style.display = "none"; // Hide admin content
   resetUIState();
 });
 // Show the success contact

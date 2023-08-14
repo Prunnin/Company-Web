@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--title-->
+    <title>intX, jsc#My Photo and Status Page</title>
+
+    <!--favicon icon-->
+    <link rel="icon" href="/img/favicon.png" type="image/png" sizes="16x16">
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet"href="/css/font-awesome.min.css">
+
+    <!--themify icon-->
+    <link rel="stylesheet" href="/css/themify-icons.css">
+
+    <!-- magnific popup css-->
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <!--owl carousel -->
+    <link href="/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/css/owl.carousel.min.css" rel="stylesheet">
+
+    <style>
+        /* CSS style for comment items */
+        .comment-item {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Add other CSS styles here */
+    </style>
+
+    <!-- bootstrap core css -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- responsive css -->
+    <link href="/css/responsive.css" rel="stylesheet">
+
+    <script src="/js/vendor/modernizr-2.8.1.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shim.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      /* Center the form */
+      .center-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 20px;
+        
+      }
+    
+      
+      .large-input {
+        width: 50%;
+        padding: 15px; /* Add some padding to the input fields */
+        margin: 10px; /* Add margin around the form groups */
+      }
+    </style>
+</head>
+
+
+
+<body>
+
+<!-- Preloader -->
+<!-- <div id="preloader">
+    <div id="loader"></div>
+</div> -->
+<!--end preloader-->
+
+<div id="main" class="main-content-wraper">
+    <div class="main-content-inner">
+
+        <!--start header section-->
+        <header class="header">
+            <!--start navbar-->
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header page-scroll">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#myNavbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand page-scroll" th:href="@{/}">
+                                <div class = "logo"> 
+                                    <img th:src="@{/img/logo-mau-trang.png}" alt="logo"
+										style="width: 100px; height: 50px;">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="navbar-collapse collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a class="page-scroll" th:href="@{/}">Home</a></li>
+                                <li><a class="page-scroll" th:href="@{/#features}">Features</a></li>
+                                <li><a class="page-scroll" th:href="@{/}">Pricing</a></li>
+                                <li><a class="page-scroll" th:href="@{/}">Faq</a></li>
+                                <li><a class="page-scroll" th:href="@{/}">News</a></li>
+                                <li><a class="page-scroll" th:href="@{/}">Contact</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--end navbar-->
+        </header>
+        <!--end header section-->
+
+        <!--start breadcrumb section-->
+        <section class="breadcrumb-section" style="background: url('img/vieo-play\(1\).png')no-repeat center center fixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center breadcrumb-content">
+                            <h2>Create User</h2>
+                            <a class="nav-link" th:href="@{/admin/users}">Or back to User Management</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="center-form">
+          <form th:action="@{/admin/users}" method="POST" class="large-input">
+            <div class="form-group">
+              <label for="name">Username</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter username" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" class="form-control" placeholder="Enter address" />
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile</label>
+              <input type="text" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" />
+            </div>
+            <div class="form-group">
+              <label for="gr_id">Group ID</label>
+              <input type="number" id="gr_id" name="gr_id" class="form-control" placeholder="Enter group ID" />
+            </div>
+            <div class="box-footer">
+              <button type="submit" class="btn btn-primary" style="background-color: blueviolet;">Submit</button>
+            </div>
+          </form>
+        </div>
+          <script>
+            async function submitForm(event) {
+              // Get the form elements
+              var nameInput = document.getElementById("name")
+              var emailInput = document.getElementById("email");
+              var passwordInput = document.getElementById("password");
+              var addressInput = document.getElementById("address");
+              var phoneInput = document.getElementById("mobile");
+              var grIdInput = document.getElementById("gr_id");
+              let d = Date();
+
+              const formData = new FormData();
+              formData.append('name', nameInput.value);
+              formData.append('password', passwordInput.value);
+              formData.append('email', emailInput.value);
+              formData.append('address', addressInput.value);
+              formData.append('mobile', phoneInput.value);
+              formData.append('gr_id', grIdInput.value);
+              formData.append('timestamp', d);
+
+              console.log(formData);
+
+              try {
+
+                if (nameInput.value.trim() !== '' && passwordInput.value.trim() !== '' && emailInput.value.trim() !== '' && addressInput.value.trim() !== '' && phoneInput.value.trim() !== '' && grIdInput.value.trim() !== '') {
+                  // Make an asynchronous HTTP POST request to the server
+                  const response = await fetch('/admin/users/new', {
+                    method: 'POST',
+                    body: formData
+                  });
+                  console.log("okemon")
+                  if (response.ok) {
+                    console.log("okemon2")
+                    // Check if all fields are filled
+                    // Show the "Comment successful" alert
+                    alert("Registration successful");
+                  } else {
+                    throw new Error('Signup failed. Please try again.');
+                  }
+                } else {
+                  // Show an alert asking the user to fill in all the fields
+                  alert("Please fill in all the fields.");
+                  // Prevent the form submission
+                  event.preventDefault();
+                }
+              } catch (error) {
+                // Show an error alert if something goes wrong with the request
+                alert(error.message);
+              }
+            } 
+          </script>
+
+        </div>
+    
+    <!--start footer section-->
+    <footer class="footer-section ptb-60">
+        <div class="footer-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="footer-single-col text-center">
+                            <!-- logo cuoi trang  -->
+                            <img th:src="@{/img/logo-mau-tim-than.png}" alt="footer logo">
+                            <div class="footer-social-list">
+                                <ul class="list-inline">
+                                    <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"> <i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"> <i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"> <i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end footer section-->
+
+</div><!--end main content inner-->
+</div>
+<!--=========== all js file link ==============-->
+
+<!-- main jQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<!-- bootstrap core js -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- smothscroll -->
+<script src="js/jquery.easeScroll.min.js"></script>
+
+<!--owl carousel-->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- scrolling nav -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!--fullscreen background video js-->
+<script src="js/jquery.mb.ytplayer.min.js"></script>
+
+<!--typed js -->
+<script src="js/typed.min.js"></script>
+
+<!--magnific popup js-->
+<script src="js/magnific-popup.min.js"></script>
+
+<!-- custom script -->
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

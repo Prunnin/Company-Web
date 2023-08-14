@@ -143,6 +143,7 @@ signupForm.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  
   resetUIState();
 });
 showCreatePost(false);
